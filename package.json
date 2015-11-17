@@ -1,0 +1,22 @@
+{
+  "name": "little-rpg-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha ./test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martin4955/little-rpg-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/martin4955/little-rpg-project/issues"
+  },
+  "homepage": "https://github.com/martin4955/little-rpg-project#readme",
+  "devDependencies": {
+    "mocha": "^2.3.4"
+  }
+}
