@@ -6,13 +6,16 @@ function createPriest(hp) {
     priest.defaultHP = hp;
     
     function heal(){
-        priest.hp = priest.hp === priest.defaultHP ? hp : hp + priest.healingPoints;
+        if(priest.hp !== priest.defaultHP || 0){
+            priest.hp += priest.healingPoints;
+        }
     }
     
     var attack = priest.attack;
     
     priest.attack = function(otherWarrior) {
-        attack(otherWarrior);
+        var actualDamage = this.attackPoint - otherWarrior.defensePoint;
+        otherWarrior.hp  -= actualDamage > 0 ? actualDamage : 0;
         heal();
     }
     

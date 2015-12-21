@@ -1,6 +1,7 @@
 var expect = require("chai").expect;
 var Battle = require("../model/battle.js");
 var Warrior = require("../model/characters/warrior.js");
+var Priest = require("../model/characters/priest.js");
 
 describe('battle', function(){
     
@@ -34,5 +35,12 @@ describe('battle', function(){
             var battle = new Battle();
             expect(battle.getWinner()).to.be.a('undefined');
         })
+        
+        it('shold work with priest as well', function() {
+            var thoros = new Priest(20);
+            var battle = new Battle(theon, thoros);
+            var winner = battle.getWinner();
+            expect(winner.id).to.eql(thoros.id);
+        });
     })
 })

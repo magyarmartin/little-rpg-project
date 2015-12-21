@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "mocha ./test"
+    "test": "mocha ./tests",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,13 @@
   "homepage": "https://github.com/martin4955/little-rpg-project#readme",
   "devDependencies": {
     "chai": "^3.4.1",
-    "mocha": "^2.3.4"
+    "mocha": "^2.3.4",
+    "supertest": "^1.1.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "cookie-parser": "^1.4.0",
+    "express": "^4.13.3",
+    "express-session": "^1.12.1"
   }
 }
